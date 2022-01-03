@@ -1,0 +1,92 @@
+.wrapper {
+  /* A altura deve ser configurada com um valor fixo para o efeito funcionar.
+   * 100vh é o tamanho máximo do viewport. */
+  height: 100vh;
+  /* Desabilitar o efeito x overflow evita que uma barra de rolagem vertical seja adicionada. */
+  overflow-x: hidden;
+  /* Habilita a rolagem da página. */
+  overflow-y: auto;
+  /* Configura a perspectiva para 2px. Essa é a distância simulada do viewport para os objetos da página.*/
+  perspective: 2px;
+}
+
+.section {
+  /* Realiza os ajustes de posicionamento necessários para o elemento. */
+  position: relative;
+  /* Altura do container. Qualquer valor é válido, desde que algum valor seja configurado. */
+  height: 90vh;
+
+  /* Formatação do texto. */
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 5px #41b9ff;
+  
+}
+
+.nav{
+    background-color: white;
+    opacity: 60%;
+}
+
+.parallax::after {
+  /* Exibe e posiciona o pseudo-elemento */
+  content: " ";
+  position: absolute;
+  top: 0;
+  background-attachment: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move o pseudo-elemento para longe da camera,
+   * faz os ajustes para que ele preencha o viewport e criar o efeito de movimento.
+  transform: translateZ(-1px) scale(1.5);
+  /* Obriga a imagem de plano de fundo a preencher todo o espaço do elemnto. */
+  background-size: 100%;
+  /* Impede a imagem de entrar no espaço de outros elemntos. */
+  z-index: -1;
+}
+
+.caixa {
+    height: 100%;
+}
+
+/* Formata a div estática. */
+.static {
+  background: white;
+}
+
+/*Ajusta a imagem de plano de fundo. */
+.bg1::after {
+  background-image: url('https://pt-br.learn.canva.com/wp-content/uploads/sites/9/2020/01/evento-corporativo-1.jpg');
+  opacity: 80%;
+}
+
+.bg2::after {
+  background-image: url('https://pt-br.learn.canva.com/wp-content/uploads/sites/9/2020/01/evento-corporativo-1.jpg');
+  opacity: 80%;
+}
+
+.img{
+  width: 1%;
+}
+
+.slides-list{
+  /*remove os estilos da lista*/
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+  
+  /* 
+	deixa todos os itens da lista
+	na horizontal e todos com a
+	mesma largura
+  */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
